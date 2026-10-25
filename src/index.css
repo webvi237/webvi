@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+  
+  h1, h2, h3, h4, .font-heading {
+    font-family: 'Space Grotesk', 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+/* Hero title simple entrance animation */
+@keyframes heroTitleIn {
+  0% {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-hero-title {
+  animation: heroTitleIn 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes cursorBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.animate-cursor-blink {
+  animation: cursorBlink 0.8s infinite;
+}
+
+@keyframes heroSubIn {
+  0% {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-hero-sub {
+  animation: heroSubIn 0.95s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards;
+  opacity: 0;
+}
+
+/* Custom glow and accent helpers according to WEBVI visual charter */
+.glow-cyan-sm {
+  box-shadow: 0 0 15px -3px rgba(0, 210, 255, 0.25);
+}
+
+.glow-cyan-md {
+  box-shadow: 0 0 25px -4px rgba(0, 210, 255, 0.35);
+}
+
+.border-cyan-glow {
+  border-color: rgba(0, 210, 255, 0.4);
+}
+
+.text-gradient-cyan {
+  background: linear-gradient(135deg, #111827 30%, #00d2ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-blue {
+  background: linear-gradient(135deg, #00d2ff 0%, #0284c7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Subtle tech grid background for light theme */
+.bg-tech-grid-light {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(17, 24, 39, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(17, 24, 39, 0.04) 1px, transparent 1px);
+}
+
+.bg-tech-grid-dark {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 210, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 210, 255, 0.04) 1px, transparent 1px);
+}

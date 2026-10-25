@@ -1,0 +1,6 @@
+{
+  "name": "WEBVI - Sécurité Électronique & Réseaux Douala",
+  "description": "Site vitrine officiel de WEBVI : expert en sécurité électronique (vidéosurveillance, contrôle d'accès, alarmes, tourniquets, GPS tracking, Starlink) à Douala, Cameroun.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
